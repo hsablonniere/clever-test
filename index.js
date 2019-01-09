@@ -4,9 +4,9 @@ const server = http.createServer(function (req, res) {
   res.end('PONG')
 })
 
+server.listen(process.env.PORT)
+
 setInterval(() => {
 	console.log('some logs', new Date())
 }, 500)
 
-
-server.listen(process.env.PORT)
